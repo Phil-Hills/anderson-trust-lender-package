@@ -1,0 +1,5 @@
+# Ignore system files 
+Thumbs.db 
+*.log 
+.vscode/ 
+node_modules/ 
