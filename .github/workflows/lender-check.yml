@@ -1,35 +1,35 @@
-name: Lender Package Check 
- 
-on: [push, pull_request] 
- 
-jobs: 
-  check-lender-package: 
-    runs-on: ubuntu-latest 
-    steps: 
-    - name: Checkout repository 
-      uses: actions/checkout@v3 
- 
-    - name: Check required folders 
-      run: | 
-        for dir in executive-summary financial-package construction-design entitlements-zoning-permits site-control-land-status sponsorship-ownership loan-details risk-mitigation sales-exit-strategy; do 
-          if [ ! -d "$dir" ]; then 
-            echo "ERROR: Missing folder: $dir" 
+name: Lender Package Check
+
+on: [push, pull_request]
+
+jobs:
+  check-lender-package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Check required folders
+        run: |
+          for dir in executive-summary financial-package construction-design entitlements-zoning-permits site-control-land-status sponsorship-ownership loan-details risk-mitigation sales-exit-strategy; do 
+            if [ ! -d "$dir" ]; then 
+              echo "ERROR: Missing folder: $dir" 
+              exit 1 
+            fi 
+          done
+
+      - name: Check README files are not empty
+        run: |
+          for file in README.md */README.md; do 
+            if [ ! -s "$file" ]; then 
+              echo "ERROR: Empty README file: $file" 
+              exit 1 
+            fi 
+          done
+
+      - name: Check for TODO markers
+        run: |
+          if grep -r "TODO" .; then 
+            echo "ERROR: Found TODO markers in files" 
             exit 1 
-          fi 
-        done 
- 
-    - name: Check README files are not empty 
-      run: | 
-        for file in README.md */README.md; do 
-          if [ ! -s "$file" ]; then 
-            echo "ERROR: Empty README file: $file" 
-            exit 1 
-          fi 
-        done 
- 
-    - name: Check for TODO markers 
-      run: | 
-        if grep -r "TODO" .; then 
-          echo "ERROR: Found TODO markers in files" 
-          exit 1 
-        fi 
+          fi

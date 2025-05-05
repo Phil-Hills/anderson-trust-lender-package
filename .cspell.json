@@ -1,1 +1,28 @@
-{  "version": "0.2",  "language": "en",  "words": [    "Ourtree",    "Anderson",    "Phil",    "GitHub",    "README",    "lender",    "workflow",    "yaml",    "proforma",    "subfolder",    "commit",    "CLI",    "VSCode",    "loan",    "escrow",    "precommit",    "pullrequest",    "contingency",    "Equity",    "SOV",    "subrogation"  ],  "ignorePaths": [    "node_modules",    ".github",    "**/*.yml",    "**/*.yaml"  ]} 
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "Ourtree",
+    "Anderson",
+    "Phil",
+    "GitHub",
+    "README",
+    "lender",
+    "workflow",
+    "yaml",
+    "proforma",
+    "subfolder",
+    "commit",
+    "CLI",
+    "VSCode",
+    "loan",
+    "escrow",
+    "precommit",
+    "pullrequest",
+    "contingency",
+    "Equity",
+    "SOV",
+    "subrogation"
+  ],
+  "ignorePaths": ["node_modules", ".github", "**/*.yml", "**/*.yaml"]
+}

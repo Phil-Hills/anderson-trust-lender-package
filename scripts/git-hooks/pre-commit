@@ -1,0 +1,3 @@
+#!/bin/sh  
+echo Running prettier check...  
+npx prettier --check . 
