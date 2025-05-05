@@ -1,1 +1,1 @@
-{ \"*.{js,json,md,yml,yaml}\": [\"prettier --write\"] } 
+{ \"*.{js,json,md,yml,yaml}\": [\"prettier --write\"] }  
