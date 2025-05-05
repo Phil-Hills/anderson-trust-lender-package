@@ -1,2 +1,13 @@
-Risk Mitigation  
-This folder addresses risk analysis, contingency plans, market exposure, fallback strategies, and how the development team plans to navigate challenges.
+# Risk Mitigation
+
+**Status:** DRAFT
+
+Details the risk management plan and contingency strategies.
+
+Includes:
+- Market risk analysis
+- Construction and cost overrun contingencies
+- Regulatory or entitlement risks
+- Fallback plans
+
+> ? Add risk matrix and mitigation strategies.
